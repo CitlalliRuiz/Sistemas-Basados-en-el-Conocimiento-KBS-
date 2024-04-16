@@ -1,0 +1,72 @@
+
+(assert (influenza fiebre dolor-de-garganta tos fatiga))
+(assert (resfriado congestion-nasal estornudos dolor-de-cabeza secrecion-nasal))
+(assert (gastritis dolor acidez nauseas vomitos))
+(assert (hipertension dolor-de-cabeza mareos vision-borrosa fatiga))
+(assert (diabetes sed hambre perdida-de-peso debilidad))
+(assert (alergia estornudos picazon lagrimeo secrecion-nasal))
+
+
+(defrule mostrar-sintomas-influenza
+  (influenza ?fiebre ?dolor-garganta ?tos ?fatiga)
+  =>
+  (printout t crlf "Síntomas de Influenza:" crlf)
+  (printout t  ?fiebre crlf)
+  (printout t  ?dolor-garganta crlf)
+  (printout t  ?tos crlf)
+  (printout t  ?fatiga crlf)
+)
+
+(defrule mostrar-sintomas-resfriado
+  (resfriado ?congestion-nasal ?estornudos ?dolor-cabeza ?secrecion-nasal)
+  =>
+  (printout t crlf "Síntomas de Resfriado:" crlf)
+  (printout t  ?congestion-nasal crlf)
+  (printout t  ?estornudos crlf)
+  (printout t  ?dolor-cabeza crlf)
+  (printout t  ?secrecion-nasal crlf)
+)
+
+(defrule mostrar-sintomas-gastritis
+  (gastritis ?dolor ?acidez ?nauseas ?vomitos)
+  =>
+  (printout t crlf "Síntomas de Gastritis:" crlf)
+  (printout t  ?dolor crlf)
+  (printout t  ?acidez crlf)
+  (printout t  ?nauseas crlf)
+  (printout t  ?vomitos crlf)
+)
+
+(defrule mostrar-sintomas-hipertension
+  (hipertension ?dolor-cabeza ?mareos ?vision-borrosa ?fatiga)
+  =>
+  (printout t crlf "Síntomas de Hipertensión:" crlf)
+  (printout t  ?dolor-cabeza crlf)
+  (printout t  ?mareos crlf)
+  (printout t  ?vision-borrosa crlf)
+  (printout t  ?fatiga crlf)
+)
+
+(defrule mostrar-sintomas-diabetes
+  (diabetes ?sed ?hambre ?perdida-peso ?debilidad)
+  =>
+  (printout t crlf "Síntomas de Diabetes:" crlf)
+  (printout t  ?sed crlf)
+  (printout t  ?hambre crlf)
+  (printout t  ?perdida-peso crlf)
+  (printout t  ?debilidad crlf)
+)
+
+(defrule mostrar-sintomas-alergia
+  (alergia ?estornudos ?picazon ?lagrimeo ?secrecion-nasal)
+  =>
+  (printout t crlf "Síntomas de Alergia:" crlf)
+  (printout t  ?estornudos crlf)
+  (printout t  ?picazon crlf)
+  (printout t  ?lagrimeo crlf)
+  (printout t  ?secrecion-nasal crlf)
+)
+
+(run)
+
+
